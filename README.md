@@ -13,7 +13,7 @@
 | Name   | 배현재  | 안재주 | 홍상훈 | 곽영상 |
 |--------|--------|--------|-------|--------|
 | Role   | Leader | 연구 및 개발 | 연구 및 개발 | 연구 및 개발 |
-| Figure | <img width="150" height="200" src="./fig/배현재.png"> | <img width="150" height="200" src="./fig/안재주.png"> | <img width="150" height="200" src="./fig/홍상훈.png"> | <img width="150" height="200" src="./fig/곽영상.png"> |
+| Figure | <img width="150" height="200" src="./fig/배현재2.png"> | <img width="150" height="200" src="./fig/안재주2.png"> | <img width="150" height="200" src="./fig/홍상훈.png"> | <img width="150" height="200" src="./fig/곽영상.png"> |
 |        |        |   |   |   |
 *** 
 
