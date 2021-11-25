@@ -9,7 +9,7 @@
 - 목표: 안전 관련 주요 시각데이터를 Cross-Domain으로 활용하여 통합 안전 관리기술의 새로운 가치 창출
 
 <p align="center">
-  <img width="677" height="350" src="./fig/서비스-소개.png">
+  <img width="700" height="230" src="./fig/서비스-소개.png">
 </p>
 
 *** 
@@ -18,7 +18,7 @@
 | Name   | 배현재  | 안재주 | 홍상훈 | 곽영상 |
 |--------|--------|--------|-------|--------|
 | Role   | Leader | 연구 및 개발 | 연구 및 개발 | 연구 및 개발 |
-| Figure | <img width="170" height="220" src="./fig/배현재.png"> | <img width="170" height="220" src="./fig/안재주.png"> | <img width="170" height="220" src="./fig/홍상훈.png"> | <img width="170" height="220" src="./fig/곽영상.png"> |
+| Figure | <img width="150" height="200" src="./fig/배현재.png"> | <img width="150" height="200" src="./fig/안재주.png"> | <img width="150" height="200" src="./fig/홍상훈.png"> | <img width="150" height="200" src="./fig/곽영상.png"> |
 |        |        |   |   |   |
 *** 
 
@@ -27,7 +27,7 @@
 2. [화재 발생 예측 데이터](https://aihub.or.kr/aidata/34121)
 
 <p align="center">
-  <img width="677" height="350" src="./fig/데이터-연계.png">
+  <img width="700" height="350" src="./fig/데이터-연계.png">
 </p>
 
 *** 
