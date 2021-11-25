@@ -24,14 +24,17 @@
 2. cd CSM
 3. pip install -r requirements.txt
 ```
+
+[Model Pretrained Weights](https://drive.google.com/drive/folders/1_-vTAHq61o6j12FOhumvNmscH0ob0CkN?usp=sharing)
+
 *** 
 
 
 ### 구동 방법
 ```
 1. CSM 환경 구성
-2. pretrained weights (https://github.com/ultralytics/yolov5) 다운로드
-3. [Model weight] 폴더에 저장
+2. pretrained weights 다운로드
+3. 프로젝트 폴더 내 Model 디렉토리에 저장
 4. python Streamlit run CSM.py
 ```
 *** 
@@ -41,5 +44,7 @@
 *** 
 
 ### Reference Repo
-[Yolov5][https://github.com/ultralytics/yolov5]
+
+[Yolov5](https://github.com/ultralytics/yolov5)
+
 *** 
