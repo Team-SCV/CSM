@@ -35,7 +35,7 @@
 1. CSM 환경 구성
 2. pretrained weights 다운로드
 3. 프로젝트 폴더 내 Model 디렉토리에 저장
-4. python Streamlit run CSM.py
+4. streamlit run CSM.py
 ```
 *** 
 
