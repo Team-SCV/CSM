@@ -7,6 +7,11 @@
 ### 서비스 소개
 - 개요: 공사현장에서의 최적의 안전진단기술을 통한 고도화된 시스템으로 개선하고자 함
 - 목표: 안전 관련 주요 시각데이터를 Cross-Domain으로 활용하여 통합 안전 관리기술의 새로운 가치 창출
+
+<p align="center">
+  <img width="677" height="350" src="./fig/서비스-소개.png">
+</p>
+
 *** 
 
 ### Team-SCV 멤버
@@ -15,8 +20,18 @@
 | Role   | Leader | 연구 및 개발 | 연구 및 개발 | 연구 및 개발 |
 | Figure | <img width="170" height="220" src="./fig/배현재.png"> | <img width="170" height="220" src="./fig/안재주.png"> | <img width="170" height="220" src="./fig/홍상훈.png"> | <img width="170" height="220" src="./fig/곽영상.png"> |
 |        |        |   |   |   |
+*** 
+
+### 활용 데이터셋
+1. [공사현장 안전장비 데이터](https://aihub.or.kr/aidata/33921)
+2. [화재 발생 예측 데이터](https://aihub.or.kr/aidata/34121)
+
+<p align="center">
+  <img width="677" height="350" src="./fig/데이터-연계.png">
+</p>
 
 *** 
+
 
 ### 환경 구성
 ```
@@ -40,8 +55,7 @@
 *** 
 
 
-### 활용 데이터셋
-*** 
+
 
 ### Reference Repo
 
