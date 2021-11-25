@@ -1,4 +1,8 @@
 # CSM
 CSM: Construction Safety Management system
 
-![csm](./fig/concept-map.png)
+ <p align="center">
+    ![csm](./fig/concept-map.png)
+ </p>
+
+
