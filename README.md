@@ -35,7 +35,7 @@
 3. pip install -r requirements.txt
 ```
 4. [Download Model Pretrained Weights](https://drive.google.com/drive/folders/1_-vTAHq61o6j12FOhumvNmscH0ob0CkN?usp=sharing)
-5. [Download Monitoring Data](https://drive.google.com/drive/folders/1_-vTAHq61o6j12FOhumvNmscH0ob0CkN?usp=sharing)
+5. [Download Monitoring Data](https://drive.google.com/drive/folders/1okeaSF7krdb2tIxFkzoUGGp18mP0TXfH?usp=sharing)
 
 *** 
 
