@@ -256,7 +256,6 @@ def Monitoring(key, model):
             st.markdown(CCTV_subtitle, unsafe_allow_html=True)
 
             file_ = open(os.getcwd() + os.sep + "Monitoring_gif" + os.sep + "video1.gif", "rb") ## 수정
-            print(file_)
             contents = file_.read()
             data_url_1 = base64.b64encode(contents).decode("utf-8")
             file_.close()
@@ -412,7 +411,6 @@ def Monitoring(key, model):
             st.markdown(CCTV_subtitle, unsafe_allow_html=True)
 
             file_ = open(os.getcwd() + os.sep + "Monitoring_gif" + os.sep + "video2.gif", "rb") ## 수정
-            print(file_)
             contents = file_.read()
             data_url_1 = base64.b64encode(contents).decode("utf-8")
             file_.close()
@@ -568,7 +566,6 @@ def Monitoring(key, model):
             st.markdown(CCTV_subtitle, unsafe_allow_html=True)
 
             file_ = open(os.getcwd() + os.sep + "Monitoring_gif" + os.sep + "video3.gif", "rb") ## 수정
-            print(file_)
             contents = file_.read()
             data_url_1 = base64.b64encode(contents).decode("utf-8")
             file_.close()
@@ -723,7 +720,7 @@ def Monitoring(key, model):
             st.markdown(CCTV_subtitle, unsafe_allow_html=True)
 
             file_ = open(os.getcwd() + os.sep + "Monitoring_gif" + os.sep + "video4.gif", "rb") ## 수정
-            print(file_)
+
             contents = file_.read()
             data_url_1 = base64.b64encode(contents).decode("utf-8")
             file_.close()
@@ -964,7 +961,11 @@ def Dash_borad(case, filter):
 
     if len(filter) == 1:
         filter = filter
-        filter_data = dash_data.loc[dash_data[plot_case]]
+
+        if plot_case == 'weekday_2':
+            filter_data = dash_data.loc[dash_data[plot_case] == filter_week_data[0]]
+        else:
+            filter_data = dash_data.loc[dash_data[plot_case] == filter[0]]
 
     elif len(filter) >= 2:
 
@@ -1119,6 +1120,7 @@ def Dash_borad(case, filter):
     num_col1, num_col2, num_col3 = st.columns(3)
     with num_col1:
         if len(filter) == 1:
+
             if plot_case =='weekday':
                 dasg_subtitle1 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 비중{}</p>'.format(plot_name,  filter)
             else:
@@ -1131,7 +1133,10 @@ def Dash_borad(case, filter):
                             <p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{}</p>'.format(plot_name, week_filter)
             st.markdown(dasg_subtitle1, unsafe_allow_html=True)
         else:
-            dasg_subtitle1 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 비중[{}~{}{}]</p>'.format(plot_name, filter_1,
+            if filter[0] == filter[1]:
+                dasg_subtitle1 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 비중[{}{}]</p>'.format(plot_name, filter_1, plot_name2)
+            else:
+                dasg_subtitle1 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 비중[{}~{}{}]</p>'.format(plot_name, filter_1,
                                                                                                                                                      filter_2, plot_name2)
             st.markdown(dasg_subtitle1, unsafe_allow_html=True)
 
@@ -1155,7 +1160,10 @@ def Dash_borad(case, filter):
                             <p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{}</p>'.format(plot_name, week_filter)
             st.markdown(dasg_subtitle2, unsafe_allow_html=True)
         else:
-            dasg_subtitle2 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 준수자 탐지 비중[{}~{}{}]</p>'.format(plot_name, filter_1,
+            if filter[0] == filter[1]:
+                dasg_subtitle2 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 준수자 탐지 비중[{}{}]</p>'.format(plot_name, filter_1, plot_name2)
+            else:
+                dasg_subtitle2 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 준수자 탐지 비중[{}~{}{}]</p>'.format(plot_name, filter_1,
                                                                                                                                                               filter_2, plot_name2)
             st.markdown(dasg_subtitle2, unsafe_allow_html=True)
 
@@ -1177,7 +1185,10 @@ def Dash_borad(case, filter):
                             <p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{}</p>'.format(plot_name, week_filter)
             st.markdown(dasg_subtitle3, unsafe_allow_html=True)
         else:
-            dasg_subtitle3 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 미준수자 탐지 비중[{}~{}{}] </p>'.format(plot_name, filter_1,
+            if filter[0] == filter[1]:
+                dasg_subtitle3 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 미준수자 탐지 비중[{}{}]</p>'.format(plot_name, filter_1, plot_name2)
+            else:
+                dasg_subtitle3 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 미준수자 탐지 비중[{}~{}{}] </p>'.format(plot_name, filter_1,
                                                                                                                                                                 filter_2, plot_name2)
             st.markdown(dasg_subtitle3, unsafe_allow_html=True)
 
@@ -1199,7 +1210,10 @@ def Dash_borad(case, filter):
                             <p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{}</p>'.format(plot_name, week_filter)
             st.markdown(dasg_subtitle4, unsafe_allow_html=True)
         else:
-            dasg_subtitle4 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 횟수[{}~{}{}]</p>'.format(plot_name, filter_1,
+            if filter[0] == filter[1]:
+                dasg_subtitle4 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 횟수[{}{}]</p>'.format(plot_name, filter_1, plot_name2)
+            else:
+                dasg_subtitle4 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 화재 탐지 횟수[{}~{}{}]</p>'.format(plot_name, filter_1,
                                                                                                                                                      filter_2, plot_name2)
             st.markdown(dasg_subtitle4, unsafe_allow_html=True)
 
@@ -1226,7 +1240,10 @@ def Dash_borad(case, filter):
                             <p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{}</p>'.format(plot_name, week_filter)
             st.markdown(dasg_subtitle5, unsafe_allow_html=True)
         else:
-            dasg_subtitle5 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 준수자 탐지 횟수[{}~{}{}]</p>'.format(plot_name, filter_1,
+            if filter[0] == filter[1]:
+                dasg_subtitle5 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 준수자 탐지 횟수[{}{}]</p>'.format(plot_name, filter_1, plot_name2)
+            else:
+                dasg_subtitle5 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 준수자 탐지 횟수[{}~{}{}]</p>'.format(plot_name, filter_1,
                                                                                                                                                               filter_2, plot_name2)
             st.markdown(dasg_subtitle5, unsafe_allow_html=True)
 
@@ -1253,7 +1270,10 @@ def Dash_borad(case, filter):
                             <p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{}</p>'.format(plot_name, week_filter)
             st.markdown(dasg_subtitle6, unsafe_allow_html=True)
         else:
-            dasg_subtitle6 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 미준수자 탐지 횟수[{}~{}{}]</p>'.format(plot_name, filter_1,
+            if filter[0] == filter[1]:
+                dasg_subtitle6 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 미준수자 탐지 횟수[{}{}]</p>'.format(plot_name, filter_1, plot_name2)
+            else:
+                dasg_subtitle6 = '<p style="font-family:sans-serif; font-weight:bold; color: #0283EE; font-size: 15px;">{} 안전장비 착용 미준수자 탐지 횟수[{}~{}{}]</p>'.format(plot_name, filter_1,
                                                                                                                                                                filter_2, plot_name2)
             st.markdown(dasg_subtitle6, unsafe_allow_html=True)
 
@@ -1329,7 +1349,7 @@ def Database(case, filter):
 
     if len(filter) == 1:
         filter = filter
-        filter_data = dash_data.loc[dash_data[plot_case]]
+        filter_data = dash_data.loc[dash_data[plot_case] == filter[0]]
 
     elif len(filter) >= 2:
 
