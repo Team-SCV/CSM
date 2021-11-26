@@ -34,8 +34,8 @@
 2. cd CSM
 3. pip install -r requirements.txt
 ```
-
-[Model Pretrained Weights](https://drive.google.com/drive/folders/1_-vTAHq61o6j12FOhumvNmscH0ob0CkN?usp=sharing)
+4. [Download Model Pretrained Weights](https://drive.google.com/drive/folders/1_-vTAHq61o6j12FOhumvNmscH0ob0CkN?usp=sharing)
+5. [Download Monitoring Data](https://drive.google.com/drive/folders/1_-vTAHq61o6j12FOhumvNmscH0ob0CkN?usp=sharing)
 
 *** 
 
@@ -43,7 +43,11 @@
 ### 5. 구동 방법
 ```
 1. CSM 환경 구성
-2. pretrained weights 다운로드
+2. [Pretrained Weights, Monitoring Data] 다운로드 및 위치시키기
+  2.1 Model/
+           Pretrained Weights
+  2.2 Monitoring_gif/
+           Monitoring Data
 3. 프로젝트 폴더 내 Model 디렉토리에 저장
 4. streamlit run CSM.py
 ```
