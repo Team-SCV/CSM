@@ -512,8 +512,7 @@ def Monitoring(key, model):
             time_placeholder_0.markdown(f"탐지 시간 : {nowDatetime}")
 
             mean_danger_count = round(np.mean(danger_chunk_list[-1]), 1)
-            # mean_fire_count = round(np.mean(fire_chunk_list[-1]), 1)
-            mean_fire_count = 0
+            mean_fire_count = round(np.mean(fire_chunk_list[-1]), 1)
 
             danger_count_placeholder_0.markdown(f"평균 안전장비 착용 미준수자 : {mean_danger_count}명", unsafe_allow_html=True)
             fire_count_placeholder_0.markdown(f"평균 화재 감지 횟수 : {mean_fire_count}회", unsafe_allow_html=True)
